@@ -376,7 +376,7 @@ q4與前面兩題的也是大同小異只是多了設定邊界以及反彈，所
 plt.xlim(-1, borderboom1.x_border)
 plt.ylim(0, borderboom1.y_border)
 ```
-以及反彈時會損失能量，這邊這設定為0.75，當速度差距<0.1時，則代表能量已經消耗完，所以變為0，在```abs(nv_x - self.v_x) < 0.1 and self.pos_x <= 0```中的```self.pos_x <= 0```以及```abs(nv_y - self.v_y) < 0.1 and self.pos_y <= 0```中的```self.pos_y <= 0```則是判斷速度差距<0.1時，位置是否為不合理處，**像是在拋物運動的頂點時，速度差也是<0.1但位置在合理處**，則速度不設定為0。
+以及反彈時會損失能量，這邊這設定為0.7，當速度差距<0.1時，則代表能量已經消耗完，所以變為0，在```abs(nv_x - self.v_x) < 0.1 and self.pos_x <= 0```中的```self.pos_x <= 0```以及```abs(nv_y - self.v_y) < 0.1 and self.pos_y <= 0```中的```self.pos_y <= 0```則是判斷速度差距<0.1時，位置是否為不合理處，**像是在拋物運動的頂點時，速度差也是<0.1但位置在合理處**，則速度不設定為0。
 ```py
 if abs(nv_x - self.v_x) < 0.1 and self.pos_x <= 0:
     self.v_x = 0
