@@ -358,7 +358,7 @@ OUTPUT
 * borderboom1 = BORDERBOOM(250.0, 250.0, 1.0, 100.0, 60.0, 9.8, 0.1, 0.01)
 ![alt text](image-4.png)
 
-* borderboom1 = BORDERBOOM(500.0, 500.0, 1.0, 100.0, 30.0, 9.8, 0.1, 0.01)
+* borderboom1 = BORDERBOOM(500.0, 500.0, 1.0, 100.0, 60.0, 9.8, 0.1, 0.01)
 ![alt text](image-5.png)
 
 修改參數
