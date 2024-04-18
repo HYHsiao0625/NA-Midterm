@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 from math import pi, sin, cos
-class Boom:
+class BOOM:
     def __init__(self, mass, v0, angle, gravity, dt):
         self.mass = mass
         self.v0 = v0
@@ -28,7 +28,7 @@ class Boom:
     def nowState(self):
         return (self.pos_x, self.pos_y)
 
-class forceBoom(Boom):
+class FORCEBOOM(BOOM):
     def __init__(self, mass, v0, angle, gravity, dt, cd):
         super().__init__(mass, v0, angle, gravity, dt)
         self.cd = cd
@@ -50,7 +50,8 @@ class forceBoom(Boom):
         return (self.pos_x, self.pos_y)
     
 if (__name__ == '__main__'):
-    forceboom1 = forceBoom(1.0, 100.0, 30.0, 9.8, 0.1, 0.01)
+    forceboom1 = FORCEBOOM(1.0, 100.0, 30.0, 9.8, 0.1, 0.01)
+    #forceboom1 = FORCEBOOM(1.0, 100.0, 60.0, 9.8, 0.1, 0.01)
     x_log = [0]
     y_log = [0]
     time = 0

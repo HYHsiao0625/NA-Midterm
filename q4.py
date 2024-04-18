@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 from math import pi, sin, cos
 
-class BorderBoom:
+class BORDERBOOM:
     def __init__(self, x_border, y_border, mass, v0, angle, gravity, dt, cd):
         self.x_border = x_border
         self.y_border = y_border
@@ -61,7 +61,8 @@ class BorderBoom:
         return (self.pos_x, self.pos_y)
     
 if (__name__ == '__main__'):
-    borderboom1 = BorderBoom(250.0, 250.0, 1.0, 100.0, 30.0, 9.8, 0.1, 0.01)
+    #borderboom1 = BORDERBOOM(250.0, 250.0, 1.0, 100.0, 60.0, 9.8, 0.1, 0.01)
+    borderboom1 = BORDERBOOM(500.0, 500.0, 1.0, 100.0, 60.0, 9.8, 0.1, 0.01)
     x_log = [0]
     y_log = [0]
     time = 0
@@ -78,8 +79,8 @@ if (__name__ == '__main__'):
         time += borderboom1.dt
 
     # Plot the trajectory
-    plt.xlim(-1, 300)
-    plt.ylim(0, 300)
+    plt.xlim(-1, borderboom1.x_border)
+    plt.ylim(0, borderboom1.y_border)
     plt.plot(x_log, y_log)
 
     # Set labels and title
