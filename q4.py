@@ -47,9 +47,11 @@ class BORDERBOOM:
         if self.pos_x > self.y_border:
             self.pos_x = self.y_border
             self.v_x *= -0.7
+            self.v_y *= 0.7
 
         if self.pos_y < 0 :
             self.pos_y = 0
+            self.v_x *= 0.7
             self.v_y *= -0.7
 
         self.pos_x += self.v_x * self.dt

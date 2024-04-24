@@ -324,7 +324,8 @@ class BORDERBOOM:
         return (self.pos_x, self.pos_y)
     
 if (__name__ == '__main__'):
-    borderboom1 = BORDERBOOM(500.0, 500.0, 1.0, 100.0, 30.0, 9.8, 0.1, 0.01)
+    borderboom1 = BORDERBOOM(250.0, 250.0, 1.0, 100.0, 60.0, 9.8, 0.1, 0.01)
+    #borderboom1 = BORDERBOOM(500.0, 500.0, 1.0, 100.0, 60.0, 9.8, 0.1, 0.01)
     x_log = [0]
     y_log = [0]
     time = 0
